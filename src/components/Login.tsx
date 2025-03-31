@@ -22,6 +22,10 @@ const Login: React.FC = () => {
     setUser(null);
   };
 
+  const takeMeHome = ()=>{
+    nav('/');
+  }
+
   const LoginContainer = styled.div`
   display: flex;
   height: 100vh;
@@ -45,6 +49,12 @@ const Login: React.FC = () => {
           <img src="../../logo.png"/>
           <Button variant="contained" color="primary" onClick={handleLogin}>
             Sign in with Google
+          </Button>
+          <p>
+            If there is some error with Login Sorry for that Please go to home page with the below button
+          </p>
+          <Button variant="contained" color="primary" onClick={takeMeHome} sx={{ marginTop: "10px" }}>
+            Home
           </Button>
           </>
       )}

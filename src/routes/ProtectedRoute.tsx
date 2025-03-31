@@ -6,8 +6,9 @@ const ProtectedRoute: React.FC = () => {
   const { user, loading } = useAuth();
 
   if (loading) return <p>Loading...</p>; // Optional loading state
-
-  return user ? <Outlet /> : <Navigate to="/login" replace />;
+  
+  // once the error with OAuth vercel is resolved Add protection logic here
+  return  <Outlet /> ;
 };
 
 export default ProtectedRoute;
